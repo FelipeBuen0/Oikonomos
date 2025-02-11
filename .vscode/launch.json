@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:1964",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "command": "sencha app build; sencha app watch --port 1964",
+            "name": "Sencha start",
+            "request": "launch",
+            "type": "node-terminal"
+        }    
+    ]
+}

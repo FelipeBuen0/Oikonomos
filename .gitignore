@@ -1,0 +1,7 @@
+/build
+/generatedFiles
+/cordova
+/node_modules
+sencha-error*
+upload.log
+*.log

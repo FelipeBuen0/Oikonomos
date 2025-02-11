@@ -1,0 +1,13 @@
+{
+  "curly": true,
+  "forin": false,
+  "nocomma": true,
+  "predef": ["Ext", "console", "window", "document", "navigator", "this"],
+  "undef": true,
+  "shadow": "outer",
+  "unused": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "esversion": "6",
+  "esnext": true
+}

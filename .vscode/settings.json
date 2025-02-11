@@ -1,0 +1,14 @@
+{
+  "dotnet-test-explorer.testProjectPath": "**/*Tests.csproj",
+  "workbench.preferredDarkColorTheme": "Limelight Studios Dark",
+  "workbench.preferredHighContrastColorTheme": "Requiem Dark",
+  "cSpell.words": [],
+  "conventionalCommits.scopes": [
+    "api",
+    "app",
+    "auth",
+    "core",
+    "infra",
+    "web"
+  ],
+}
