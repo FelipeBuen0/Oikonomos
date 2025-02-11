@@ -1,0 +1,52 @@
+.kanban-item {
+    position: relative;
+    background: white;
+    border-radius: 4px;
+    margin: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+    .status-bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+    }
+
+    &.status-open .status-bar { background-color: #FF4D4D; }
+    &.status-in_progress .status-bar { background-color: #00CC65; }
+    &.status-closed .status-bar { background-color: #080B0D; }
+
+    .content {
+        padding: 12px 12px 12px 16px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+    }
+
+    .title {
+        font-weight: bold;
+        flex: 1;
+    }
+
+    .priority {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-left: 8px;
+
+        &.priority-1 { background-color: orange; }
+        &.priority-2 { background-color: yellow; }
+        &.priority-3 { background-color: red; }
+    }
+
+    .description {
+        font-size: 0.9em;
+        color: #666;
+    }
+
