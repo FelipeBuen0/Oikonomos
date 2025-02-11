@@ -1,6 +1,10 @@
-# TaskManager
+# Oikonomos
 
 A responsive ExtJS TaskManager application created for Sencha's Webinar about responsiveness. This application demonstrates modern desktop application development using ExtJS framework with a Material theme.
+
+Why Oikonomos you ask? 
+
+In ancient Greece, a man who oversaw and managed tasks for his employees, particularly in a household or estate, was called an "oikonomos" (οἰκονόμος). The term comes from oikos (household) and nomos (law or management), meaning "household manager" or "steward."
 
 ## Prerequisites
 
