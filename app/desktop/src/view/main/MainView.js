@@ -19,12 +19,18 @@ Ext.define('TaskManager.view.main.MainView', {
         responsiveConfig: {
             'small || medium': {
                 items: [{
-                    xtype: 'carousel-view'
+                    xtype: 'carousel-container'
                 }]
             },
             large: {
                 items: [{
-                    xtype: 'kanban-view'
+                    xtype: 'kanban-view',
+                    height: '100%'
+                }, {
+                    xtype: 'button',
+                    cls: 'floating-circle-button',
+                    iconCls: 'x-fa fa-plus',
+                    handler: 'onAddNewTask'
                 }]
             }
         }

@@ -39,7 +39,7 @@
         height: 12px;
         border-radius: 50%;
         margin-left: 8px;
-
+        border: 0px !important;
         &.priority-1 { background-color: orange; }
         &.priority-2 { background-color: yellow; }
         &.priority-3 { background-color: red; }

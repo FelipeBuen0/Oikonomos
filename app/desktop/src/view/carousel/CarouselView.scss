@@ -17,11 +17,26 @@
     }
 
     .kanban-items {
-        height: calc(100vh - 200px);
+        height: calc(100vh - 110px);
         overflow-y: auto;
     }
-
-    .x-carousel-item {
-        padding: 10px;
+}
+.carousel-container {
+    .floating-circle-button {
+        position: fixed !important;
+        bottom: 86px;
+        right: 24px;
+        width: 56px;
+        height: 56px;
+        border-radius: 28px !important;
+        background-color: $primary-color !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        z-index: 1000;
+        padding: 0;
+        
+        .x-icon-el {
+            color: white;
+            font-size: 24px;
+        }
     }
 }

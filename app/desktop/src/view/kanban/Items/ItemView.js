@@ -13,7 +13,7 @@ Ext.define('TaskManager.view.kanban.items.ItemView', {
             <div class="content">
                 <div class="header">
                     <div class="title">{title}</div>
-                    <div class="priority priority-{priority}" data-qtip="Prioridade: {[this.getPriorityLabel(values.priority)]}"></div>
+                    <div class="priority priority-{priority}"></div>
                 </div>
                 <div class="description">{description}</div>
                 <div class="footer">

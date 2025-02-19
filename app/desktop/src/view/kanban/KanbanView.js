@@ -1,10 +1,6 @@
 Ext.define('TaskManager.view.kanban.KanbanView', {
     extend: 'Ext.Container',
     xtype: 'kanban-view',    
-    requires: [
-        'TaskManager.store.TaskStore',
-        'TaskManager.view.kanban.KanbanViewModel'
-    ],
     viewModel: 'kanban-view',
     cls: 'kanban-view',
     layout: {
@@ -76,5 +72,11 @@ Ext.define('TaskManager.view.kanban.KanbanView', {
                 store: '{closedTasks}'
             }
         }]
+    }, {
+        xtype: 'button',
+        ui: 'round flat',
+        cls: 'floating-circle-button',
+        iconCls: 'x-fa fa-plus',
+        handler: 'onAddNewTask'
     }]
 });

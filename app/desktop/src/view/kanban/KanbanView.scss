@@ -129,3 +129,21 @@
         color: #999;
     }
 }
+
+.floating-circle-button {
+    position: fixed !important;
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 28px !important;
+    background-color: $primary-color !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    padding: 0;
+    
+    .x-icon-el {
+        color: white;
+        font-size: 24px;
+    }
+}
