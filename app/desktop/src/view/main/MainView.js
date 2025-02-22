@@ -3,14 +3,16 @@ Ext.define('TaskManager.view.main.MainView', {
     xtype: 'main-view',
     cls: 'main-view',
     controller: 'main-view',
+    viewModel: 'main-view',
     layout: 'vbox',
     responsiveFormulas: {
-        small: 'width < 600',
+        small (context) {
+            return context.width < 600;
+        },
         medium: 'width >= 600 && width <= 820',
         large: 'width >= 800'
     },
     items: [{
-        //Vou copiar o Ifood
         xtype: 'menu-view'
     }, {
         xtype: 'container',
@@ -34,5 +36,8 @@ Ext.define('TaskManager.view.main.MainView', {
                 }]
             }
         }
-    }]
+    }],
+    listeners: {
+        resize: 'onResize'
+    }
 });

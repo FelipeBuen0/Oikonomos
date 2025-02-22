@@ -30,7 +30,6 @@ Ext.define('TaskManager.view.main.menu.MenuView', {
                 xtype: 'button',
                 iconCls: 'x-fa fa-users icon-color',
                 text: 'Users',
-                // handler: 'onShowEmployees'
             }]
         },
         large: {
