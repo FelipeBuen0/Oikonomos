@@ -2,9 +2,6 @@ Ext.define('TaskManager.view.kanban.KanbanViewModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.kanban-view',
     stores: {
-        tasks: {
-            type: 'taskstore'
-        },
         openTasks: {
             source: '{tasks}',
             filters: [{

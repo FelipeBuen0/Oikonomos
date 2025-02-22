@@ -18,7 +18,7 @@ Ext.define('TaskManager.view.kanban.KanbanView', {
             bind: {
                 html: `
                     <div class="column-title status-open">
-                        <span class="title-text">Abertos</span>
+                        <span class="title-text">Open</span>
                         <span class="counter">{openTasksCount}</span>
                     </div>
                 `
@@ -40,7 +40,7 @@ Ext.define('TaskManager.view.kanban.KanbanView', {
             bind: {
                 html: `
                     <div class="column-title status-inProgress">
-                        <span class="title-text">Em Progresso</span>
+                        <span class="title-text">Ongoing</span>
                         <span class="counter">{inProgressTasksCount}</span>
                     </div>
                 `
