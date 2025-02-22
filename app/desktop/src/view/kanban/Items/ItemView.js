@@ -1,12 +1,10 @@
 Ext.define('TaskManager.view.kanban.items.ItemView', {
     extend: 'Ext.dataview.DataView',
     xtype: 'kanban-item-view',
-
+    itemSelector: '.kanban-item',
     cls: 'kanban-items',
     scrollable: true,
-    itemSelector: '.kanban-item',
     selectOnFocus: true,
-    
     itemTpl: `
         <div class="kanban-item status-{status}">
             <div class="status-bar"></div>
@@ -22,22 +20,7 @@ Ext.define('TaskManager.view.kanban.items.ItemView', {
             </div>
         </div>
     `,
-
     listeners: {
-        itemdblclick: 'onItemDblClick',
         itemtap: 'onItemTap'
-    },
-
-    initComponent: function() {
-        this.tpl = new Ext.XTemplate(this.itemTpl, {
-            getPriorityLabel: function(priority) {
-                return {
-                    '1': 'Baixa',
-                    '2': 'Média',
-                    '3': 'Alta'
-                }[priority] || 'Não definida';
-            }
-        });
-        this.callParent();
     }
 });
