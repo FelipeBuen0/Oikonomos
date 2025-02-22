@@ -1,15 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Set Poppins as default font family
+$font-family: 'Poppins', sans-serif !default;
+$default-font-family: 'Poppins', sans-serif !default;
+
+// Optional: Create utility classes for different font weights
+.poppins-light { font-weight: 300; }
+.poppins-regular { font-weight: 400; }
+.poppins-medium { font-weight: 500; }
+.poppins-semibold { font-weight: 600; }
+.poppins-bold { font-weight: 700; }
+
 $base-color-success: dynamic(#66CB9F);
 $base-color-error: dynamic(#F16063);
 $base-color-alert: dynamic(#ffaf6e);
 $base-white-color: dynamic(#F2F2F2);
 
 
-$primary-color: dynamic(rgba(#34495e, 80%));
-$primary-color-dark: dynamic(#403E3F);
+$primary-color: dynamic(rgba(#3a5ed1, 80%));
+$primary-color-dark: dynamic(#193e2e);
 $primary-color-light: dynamic(lighten($primary-color, 5%));
 $base-gray-color: dynamic(#A6A6A6);
 $base-color: $primary-color;
 
+.modern-grid {
+    // background-color: #A6A6A6;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    .x-gridheader {
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #e0e0e0;
+        
+        .x-headercontainer {
+            background: transparent;
+        }
+    }
+    .x-titlebar {
+        background-color: #f5f5f5 !important;
+        border-radius: 8px 8px 0 0 !important;
+        border-bottom: none;
+
+        .x-title {
+            color: #555;
+            font-weight: 600;
+        }
+    }
+    .x-headercontainer {
+        .x-gridcolumn {
+            background: transparent;
+            border: none;
+            padding: 12px 8px;
+            
+            .x-text-el {
+                color: #616161;
+                font-weight: 500;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            &.x-sorted {
+                .x-text-el {
+                    color: $primary-color;
+                }
+            }
+        }
+        border-top: none;
+    }
+}
 
 ::-webkit-scrollbar {
     background-color: lighten($color, 70%);
@@ -183,8 +241,8 @@ BODY {
 }
 
 $tab-icon-horizontal-spacing: 8px;
-$font-family: 'Poppins', sans-serif;
-$rowheader-font-family: 'Poppins', sans-serif;
+$font-family: $default-font-family;
+$rowheader-font-family: $default-font-family;
 $font-weight-bold: 700;
 $panel-body-color: #000;
 
@@ -195,7 +253,7 @@ $panel-body-color: #000;
     $border-radius: 8px);
 
 @include textfield-ui($ui: 'font-poppins',
-    $input-font-family: 400 15px/1.35 'Poppins', sans-serif);
+    $input-font-family: 400 15px/1.35 'Poppins');
 
 .gap-4 {
     gap: 4px;

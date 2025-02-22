@@ -33,7 +33,7 @@
         color: #FF4D4D;
     }
     
-    &.status-inProgress {
+    &.status-ongoing {
         background-color: rgba(0, 204, 101, 0.1);
         color: #00CC65;
     }
@@ -41,6 +41,10 @@
     &.status-closed {
         background-color: rgba(8, 11, 13, 0.1);
         color: #080B0D;
+    }
+    &.status-overdue {
+        background-color: rgba(255, 200, 36, 0.1);
+        color: rgb(255, 200, 36);
     }
 
     .counter {
@@ -79,7 +83,7 @@
     }
 
     &.status-open .status-bar { background-color: #FF4D4D; }
-    &.status-in_progress .status-bar { background-color: #00CC65; }
+    &.status-ongoing .status-bar { background-color: #00CC65; }
     &.status-closed .status-bar { background-color: #080B0D; }
 
     .content {
@@ -92,7 +96,7 @@
         margin-bottom: 16px;
         padding: 8px;
         &.status-open .status-bar { background-color: #FF4D4D; }
-        &.status-in_progress .status-bar { background-color: #00CC65; }
+        &.status-ongoing .status-bar { background-color: #00CC65; }
         &.status-closed .status-bar { background-color: #080B0D; }
     }
 

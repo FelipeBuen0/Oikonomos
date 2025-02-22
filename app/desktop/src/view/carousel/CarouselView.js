@@ -11,7 +11,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
             bind: {
                 html: `
                     <div class="column-title status-open">
-                        <span class="title-text">Abertos</span>
+                        <span class="title-text">Open</span>
                         <span class="counter">{openTasks.count}</span>
                     </div>`
             }
@@ -28,15 +28,15 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
             cls: 'kanban-column-header',
             bind: {
                 html: `
-                    <div class="column-title status-inProgress">
-                        <span class="title-text">Em Progresso</span>
-                        <span class="counter">{inProgressTasks.count}</span>
+                    <div class="column-title status-ongoing">
+                        <span class="title-text">Ongoing</span>
+                        <span class="counter">{ongoingTasks.count}</span>
                     </div>`
             }
         }, {
             xtype: 'kanban-item-view',
             bind: {
-                store: '{inProgressTasks}'
+                store: '{ongoingTasks}'
             }
         }]
     }, {
@@ -47,7 +47,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
             bind: {
                 html: `
                     <div class="column-title status-closed">
-                        <span class="title-text">Fechados</span>
+                        <span class="title-text">Closed</span>
                         <span class="counter">{closedTasks.count}</span>
                     </div>`
             }

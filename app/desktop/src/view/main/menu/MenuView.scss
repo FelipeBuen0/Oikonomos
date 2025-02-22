@@ -1,7 +1,13 @@
 .menu-view {
-    background-color: $primary-color;
+    box-shadow: none;
+    border-bottom: 1px solid #e0e0e0;
+    // background-color: $base-white-color !important;
     div .icon-color{
-        color: $base-white-color;
+        color: $primary-color;
+    }
+    .title {
+        color: $primary-color;
+        margin: 8px 8px 0px 0px;
     }
 }
 

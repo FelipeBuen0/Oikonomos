@@ -15,7 +15,7 @@ Ext.define('TaskManager.view.kanban.items.ItemView', {
                 </div>
                 <div class="description">{description}</div>
                 <div class="footer">
-                    <div class="date">{[Ext.Date.format(values.scheduleTo, 'd/m/Y') || '']}</div>
+                    <div class="date">{scheduleTo:date}</div>
                 </div>
             </div>
         </div>

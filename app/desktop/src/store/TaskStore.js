@@ -2,187 +2,167 @@ Ext.define('TaskManager.store.TaskStore', {
     extend: 'Ext.data.Store',
     alias: 'store.taskstore',
     
-    fields: ['id', 'title', 'description', 'status', 'priority'],
+    fields: ['id', 'title', 'description', 'assignedTo', 'scheduleTo', 'status', 'priority'],
     
     data: [{
         id: 1,
         title: 'Implement login', 
         description: 'Implement authentication system', 
+        assignedTo: 'John Smith',
         priority: '3', 
-        status: 'open' 
+        status: 'open',
+        scheduleTo: '2025-01-15'
     }, {
         id: 2, 
         title: 'Create documentation', 
         description: 'Document all features', 
+        assignedTo: 'Jane Doe',
         priority: '2', 
-        status: 'closed' 
-    }, { 
-        id: 3, 
-        title: 'Fix bugs', 
-        description: 'Resolve reported bugs', 
-        priority: '1', 
-        status: 'closed' 
-    }, { 
-        id: 4, 
-        title: 'Review code', 
-        description: 'Review code from other developers', 
-        priority: '2', 
-        status: 'open' 
-    }, { 
-        id: 5, 
-        title: 'Update dependencies', 
-        description: 'Update libraries and dependencies', 
-        priority: '3', 
-        status: 'open' 
-    }, { 
-        id: 6, 
-        title: 'Test features', 
-        description: 'Write unit tests', 
-        priority: '1', 
-        status: 'open' 
-    }, { 
-        id: 7, 
-        title: 'Refactor code', 
-        description: 'Improve code structure', 
-        priority: '2', 
-        status: 'open' 
-    }, { 
-        id: 8, 
-        title: 'Plan sprint', 
-        description: 'Plan tasks for the next sprint', 
-        priority: '3', 
-        status: 'open' 
-    }, { 
-        id: 9, 
-        title: 'Configure CI/CD', 
-        description: 'Configure continuous integration', 
-        priority: '1', 
-        status: 'open' 
-    }, { 
-        id: 10, 
-        title: 'Deploy', 
-        description: 'Deploy to production', 
-        priority: '2', 
-        status: 'open' 
-    }, { 
-        id: 11, 
-        title: 'Monitor system', 
-        description: 'Monitor system performance', 
-        priority: '3', 
-        status: 'open' 
-    }, { 
-        id: 12, 
-        title: 'Analyze logs', 
-        description: 'Analyze error logs', 
-        priority: '1', 
-        status: 'open' 
-    }, { 
-        id: 13, 
-        title: 'Create integration tests', 
-        description: 'Write integration tests', 
-        priority: '2', 
-        status: 'in_progress' 
-    }, { 
-        id: 14, 
-        title: 'Implement cache', 
-        description: 'Add cache to improve performance', 
-        priority: '3', 
-        status: 'in_progress' 
-    }, { 
-        id: 15, 
-        title: 'Improve UI', 
-        description: 'Enhance user interface', 
-        priority: '1', 
-        status: 'in_progress' 
-    }, { 
-        id: 16, 
-        title: 'Optimize queries', 
-        description: 'Optimize database queries', 
-        priority: '2', 
-        status: 'in_progress' 
-    }, { 
-        id: 17, 
-        title: 'Configure development environment', 
-        description: 'Set up local environment', 
-        priority: '3', 
-        status: 'in_progress' 
-    }, { 
-        id: 18, 
-        title: 'Write API documentation', 
-        description: 'Document API endpoints', 
-        priority: '1', 
-        status: 'in_progress' 
-    }, { 
-        id: 19, 
-        title: 'Implement OAuth authentication', 
-        description: 'Add OAuth support', 
-        priority: '2', 
-        status: 'in_progress' 
-    }, { 
-        id: 20, 
-        title: 'Perform load tests', 
-        description: 'Test system under load', 
-        priority: '3', 
-        status: 'in_progress' 
-    }, { 
-        id: 21, 
-        title: 'Configure backups', 
-        description: 'Set up automatic backups', 
-        priority: '1', 
-        status: 'in_progress' 
-    }, { 
-        id: 22, 
-        title: 'Review security', 
-        description: 'Review system security', 
-        priority: '2', 
-        status: 'closed' 
-    }, { 
-        id: 23, 
-        title: 'Improve documentation', 
-        description: 'Enhance existing documentation', 
-        priority: '3', 
-        status: 'in_progress' 
-    }, { 
-        id: 24, 
-        title: 'Implement logging', 
-        description: 'Add logging to the system', 
-        priority: '1', 
-        status: 'closed' 
-    }, { 
-        id: 25, 
-        title: 'Fix vulnerabilities', 
-        description: 'Resolve security vulnerabilities', 
-        priority: '2', 
-        status: 'closed' 
-    }, { 
-        id: 26, 
-        title: 'Update operating system', 
-        description: 'Update server OS', 
-        priority: '3', 
-        status: 'closed' 
-    }, { 
-        id: 27, 
-        title: 'Migrate database', 
-        description: 'Migrate database to new version', 
-        priority: '1', 
-        status: 'closed' 
-    }, { 
-        id: 28, 
-        title: 'Deactivate obsolete features', 
-        description: 'Remove unused features', 
-        priority: '2', 
-        status: 'closed' 
-    }, { 
-        id: 29, 
-        title: 'Perform audit', 
-        description: 'Audit code and processes', 
-        priority: '3', 
-        status: 'closed' 
-    }, { 
-        id: 30, 
-        title: 'Implement new metrics', 
-        description: 'Add new monitoring metrics', 
-        priority: '1', 
-        status: 'closed' 
+        status: 'closed',
+        scheduleTo: '2025-10-15'
+    }, {
+        id: 3,
+        title: 'Update UI design',
+        description: 'Modernize user interface components',
+        assignedTo: 'Mike Johnson',
+        priority: '1',
+        status: 'ongoing',
+        scheduleTo: '2025-03-20'
+    }, {
+        id: 4,
+        title: 'Fix performance issues',
+        description: 'Optimize database queries and front-end rendering',
+        assignedTo: 'Sarah Wilson',
+        priority: '3',
+        status: 'open',
+        scheduleTo: '2025-02-28'
+    }, {
+        id: 5,
+        title: 'Add export functionality',
+        description: 'Implement data export to PDF and Excel',
+        assignedTo: 'John Smith',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-04-10'
+    }, {
+        id: 6,
+        title: 'Implement user roles',
+        description: 'Add role-based access control system',
+        assignedTo: 'Mike Johnson',
+        priority: '1',
+        status: 'open',
+        scheduleTo: '2025-05-15'
+    }, {
+        id: 7,
+        title: 'Database backup system',
+        description: 'Create automated backup solution',
+        assignedTo: 'Sarah Wilson',
+        priority: '2',
+        status: 'ongoing',
+        scheduleTo: '2025-04-25'
+    }, {
+        id: 8,
+        title: 'Mobile responsiveness',
+        description: 'Ensure application works on mobile devices',
+        assignedTo: 'Jane Doe',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-06-01'
+    }, {
+        id: 9,
+        title: 'Security audit',
+        description: 'Perform complete security assessment',
+        assignedTo: 'John Smith',
+        priority: '1',
+        status: 'open',
+        scheduleTo: '2025-05-20'
+    }, {
+        id: 10,
+        title: 'API documentation',
+        description: 'Document all API endpoints and usage',
+        assignedTo: 'Mike Johnson',
+        priority: '3',
+        status: 'open',
+        scheduleTo: '2025-07-10'
+    }, {
+        id: 11,
+        title: 'Email notification system',
+        description: 'Implement email alerts for important events',
+        assignedTo: 'Sarah Wilson',
+        priority: '2',
+        status: 'ongoing',
+        scheduleTo: '2025-06-15'
+    }, {
+        id: 12,
+        title: 'User dashboard',
+        description: 'Create personalized user dashboard',
+        assignedTo: 'Jane Doe',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-08-01'
+    }, {
+        id: 13,
+        title: 'Error logging system',
+        description: 'Implement comprehensive error tracking',
+        assignedTo: 'John Smith',
+        priority: '3',
+        status: 'open',
+        scheduleTo: '2025-07-20'
+    }, {
+        id: 14,
+        title: 'Payment integration',
+        description: 'Add payment gateway integration',
+        assignedTo: 'Mike Johnson',
+        priority: '1',
+        status: 'open',
+        scheduleTo: '2025-09-05'
+    }, {
+        id: 15,
+        title: 'Unit test suite',
+        description: 'Develop comprehensive unit tests',
+        assignedTo: 'Sarah Wilson',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-08-15'
+    }, {
+        id: 16,
+        title: 'Search functionality',
+        description: 'Implement advanced search features',
+        assignedTo: 'Jane Doe',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-09-20'
+    }, {
+        id: 17,
+        title: 'Performance monitoring',
+        description: 'Set up application performance monitoring',
+        assignedTo: 'John Smith',
+        priority: '3',
+        status: 'open',
+        scheduleTo: '2025-10-01'
+    }, {
+        id: 18,
+        title: 'User guide creation',
+        description: 'Create comprehensive user documentation',
+        assignedTo: 'Mike Johnson',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-09-15'
+    }, {
+        id: 19,
+        title: 'Database optimization',
+        description: 'Optimize database queries and indexes',
+        assignedTo: 'Sarah Wilson',
+        priority: '1',
+        status: 'open',
+        scheduleTo: '2025-10-15'
+    }, {
+        id: 20,
+        title: 'Analytics dashboard',
+        description: 'Implement analytics and reporting dashboard',
+        assignedTo: 'Jane Doe',
+        priority: '2',
+        status: 'open',
+        scheduleTo: '2025-11-01'
     }]
 });

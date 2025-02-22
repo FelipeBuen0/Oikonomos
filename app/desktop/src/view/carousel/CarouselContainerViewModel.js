@@ -13,11 +13,11 @@ Ext.define('TaskManager.view.carousel.CarouselContainerViewModel', {
                 value: 'open'
             }]
         },
-        inProgressTasks: {
+        ongoingTasks: {
             source: '{tasks}',
             filters: [{
                 property: 'status',
-                value: 'in_progress'
+                value: 'ongoing'
             }]
         },
         closedTasks: {

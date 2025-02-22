@@ -5,5 +5,9 @@ Ext.define('TaskManager.view.kanban.KanbanViewController', {
         const me = this;
         const viewModel = me.getViewModel();
         TicketsManager.createNewTicket(viewModel);
+    },
+    onItemTap() {
+        const me = this;
+        const viewModel = me.getViewModel();
     }
 });

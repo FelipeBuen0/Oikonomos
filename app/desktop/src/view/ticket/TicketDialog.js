@@ -55,11 +55,8 @@ Ext.define('TaskManager.view.ticket.TicketDialog', {
                 text: 'Open',
                 value: 'open'
             }, {
-                text: 'In Progress',
-                value: 'in_progress'
-            }, {
-                text: 'Closed',
-                value: 'closed'
+                text: 'Ongoing',
+                value: 'ongoing'
             }]
         }]
     }],

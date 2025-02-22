@@ -1,9 +1,9 @@
 Ext.define('TaskManager.view.main.menu.MenuView', {
     extend: 'Ext.Toolbar',
     xtype: 'menu-view',
+    cls: 'menu-view',
     responsiveConfig: {
         'small || medium': {
-            cls: 'menu-view',
             padding: 0,
             layout: {
                 type: 'hbox',
@@ -18,52 +18,46 @@ Ext.define('TaskManager.view.main.menu.MenuView', {
             },
             items: [{
                 iconCls: 'x-fa fa-home icon-color',
-                text: 'Kanban',
+                text: 'Dashboard',
                 margin: 0,
-                handler: 'onShowKanban'
+                handler: 'onShowDashboard'
             }, {
                 xtype: 'button',
                 iconCls: 'x-fa fa-tasks icon-color',
-                text: 'Tasks',
-                handler: 'TasksMenu'
+                text: 'Kanban',
+                handler: 'onShowKanban'
             }, {
                 xtype: 'button',
+                text: 'Employees',
                 iconCls: 'x-fa fa-users icon-color',
-                text: 'Users',
+                handler: 'onShowEmployees'
             }]
         },
         large: {
-            cls: 'menu-view',
             layout: {
                 type: 'hbox',
                 align: 'stretch'
             },
             padding: 8,
             docked: 'top',
+            defaults: {
+                xtype: 'button'
+            },
             items: [{
-                xtype: 'button',
+                text: 'Dashboard',
+                iconCls: 'x-fa fa-home icon-color',
+                margin: '8 0 8 0',
+                handler: 'onShowDashboard'
+            }, {
                 text: 'Kanban',
-                iconCls: 'x-fa fa-home',
-                margin: '0 0 10 0',
-                handler: 'onShowKanban'
+                iconCls: 'x-fa fa-tasks icon-color',
+                handler: 'onShowKanban',
+                margin: '8 0 8 0'
             }, {
-                xtype: 'button',
-                text: 'Pending Tasks',
-                iconCls: 'x-fa fa-tasks',
-                handler: 'onShowPendingTasks',
-                margin: '0 0 10 0'
-            }, {
-                xtype: 'button',
-                text: 'Completed Tasks',
-                iconCls: 'x-fa fa-check-circle',
-                handler: 'onShowCompletedTasks',
-                margin: '0 0 10 0'
-            }, {
-                xtype: 'button',
-                text: 'Show Employees',
-                iconCls: 'x-fa fa-users',
+                text: 'Employees',
+                iconCls: 'x-fa fa-users icon-color',
                 handler: 'onShowEmployees',
-                margin: '0 0 10 0'
+                margin: '8 0 8 0'
             }, '->', {
                 xtype: 'component',
                 html: '<div class="title">Task Manager</div>'

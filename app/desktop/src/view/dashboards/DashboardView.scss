@@ -1,0 +1,48 @@
+.dashboard-view {
+    .priority {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 0px !important;
+        &.priority-1 { background-color: orange; }
+        &.priority-2 { background-color: yellow; }
+        &.priority-3 { background-color: red; }
+    }
+
+    .overdue-task {
+        background-color: tomato !important;
+    }
+    .status-open {
+        color: #FF4D4D;
+    }
+    .column-title {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .status-ongoing {
+        color: #00CC65;
+    }
+    .status-overdue {
+        color: #ffc824;
+    }
+    .status-closed {
+        color: #080B0D;
+    }
+    .dashboard-text {
+        font-size: 16px;
+        text-align: center;
+    }
+    .dashboard-counter {
+        font-size: 32px;
+        text-align: center;
+    }
+    .dashboard-column {
+        display: flex;
+        flex-direction: row;
+        width: 128px;
+        border-radius: 8px;
+        margin: 8px;
+        overflow: hidden;
+    }
+}

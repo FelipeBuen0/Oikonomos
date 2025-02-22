@@ -12,40 +12,42 @@ Ext.define('TaskManager.controller.MainController', {
     getResponsiveMode() {
         return this._responsiveMode;
     },
-    setResponsiveMode (value) {
-        this._responsiveMode = value;
+    setResponsiveMode (context, formulas) {
+        if (formulas.small(context)) {
+            this._responsiveMode = 'small';
+        } else if (formulas.medium(context)) {
+            this._responsiveMode = 'medium';
+        } else if (formulas.large(context)) {
+            this._responsiveMode = 'large';
+        }
     },
     onResize (container) {
         const me = this;
         const context = Ext.mixin.Responsive.context;
         const formulas = container.getResponsiveFormulas();
-        if (formulas.small(context)) {
-            me.setResponsiveMode('small');
-        } else if (formulas.medium(context)) {
-            me.setResponsiveMode('medium');
-        } else if (formulas.large(context)) {
-            me.setResponsiveMode('large');
-        }
+        me.setResponsiveMode(context, formulas);
     },
-
+    
     toggleMenu (button) {
         var menu = Ext.create('TaskManager.view.menu.MenuView');
         menu.showBy(button, 'tr-br');
     },
+    onShowDashboard() {
+        this.switchView('dashboard-view');
+    },
     onShowKanban() {
+        const me = this;
+        if (me.getResponsiveMode() !== "large") {
+            this.switchView('carousel-container');
+            return;
+        }
         this.switchView('kanban-view');
-    },
-    onShowPendingTasks() {
-        this.switchView('kanban-view');
-    },
-    onShowCompletedTasks() {
-        this.switchView('completed-tasks-view');
     },
     onShowEmployees() {
         this.switchView('employees-view');
     },
     switchView(viewXtype) {
-        const container = this.getView().down('container[layout=card]');
+        const container = this.lookup('cardContainer');
         const view = container.down(viewXtype);
         
         if (view) {

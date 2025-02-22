@@ -15,6 +15,7 @@ Ext.define('TaskManager.view.main.MainView', {
         xtype: 'menu-view'
     }, {
         xtype: 'container',
+        reference: 'cardContainer',
         flex: 1,
         layout: 'card',
         responsiveConfig: {
@@ -25,7 +26,7 @@ Ext.define('TaskManager.view.main.MainView', {
             },
             large: {
                 items: [{
-                    xtype: 'kanban-view',
+                    xtype: 'dashboard-view',
                     height: '90%'
                 }]
             }

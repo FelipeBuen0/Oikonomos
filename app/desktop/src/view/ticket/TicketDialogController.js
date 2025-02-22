@@ -15,7 +15,6 @@ Ext.define('TaskManager.view.ticket.TicketDialogController', {
             TicketsManager.insertTicket(values, store)
                 .then(() => {
                     dialog.close();
-                    Ext.Msg.alert('Success', 'Ticket created successfully');
                 })
                 .catch(err => {
                     Ext.Msg.alert('Error', 'Failed to create task');

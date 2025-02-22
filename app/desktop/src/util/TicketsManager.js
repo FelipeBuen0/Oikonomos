@@ -2,12 +2,9 @@ Ext.define('TaskManager.util.TicketsManager', {
     alternateClassName: ['TicketsManager'],
     singleton: true,
     insertTicket(ticketData, store) {
-        //<debug>
-        debugger;
-        //</debug>
         return new Promise((resolve) => {
             ticketData.id = parseInt(Ext.id(null, ' ')) + 100;
-            store.add(ticketData);
+            store.insert(0, ticketData);
             store.sync();
             resolve(ticketData);
         });
@@ -51,7 +48,6 @@ Ext.define('TaskManager.util.TicketsManager', {
                 }
             };
 
-            // Merge default config with provided options
             const config = Ext.platformTags.desktop ? 
                 defaultConfig : 
                 Ext.merge({}, defaultConfig, options);
