@@ -3,7 +3,6 @@ Ext.define('TaskManager.view.main.MainView', {
     xtype: 'main-view',
     cls: 'main-view',
     controller: 'main-view',
-    viewModel: 'main-view',
     layout: 'vbox',
     responsiveFormulas: {
         small (context) {
@@ -27,12 +26,7 @@ Ext.define('TaskManager.view.main.MainView', {
             large: {
                 items: [{
                     xtype: 'kanban-view',
-                    height: '100%'
-                }, {
-                    xtype: 'button',
-                    cls: 'floating-circle-button',
-                    iconCls: 'x-fa fa-plus',
-                    handler: 'onAddNewTask'
+                    height: '90%'
                 }]
             }
         }

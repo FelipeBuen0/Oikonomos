@@ -2,6 +2,9 @@ Ext.define('TaskManager.view.kanban.KanbanViewModel', {
     extend: 'Ext.app.ViewModel',
     alias: 'viewmodel.kanban-view',
     stores: {
+        tasks: {
+            type: 'taskstore'
+        },
         openTasks: {
             source: '{tasks}',
             filters: [{
@@ -27,19 +30,28 @@ Ext.define('TaskManager.view.kanban.KanbanViewModel', {
 
     formulas: {
         openTasksCount: {
-            bind: '{openTasks}',
+            bind: {
+                bindTo: '{openTasks}',
+                deep: true
+            },
             get: function(store) {
                 return store ? store.getCount() : 0;
             }
         },
         inProgressTasksCount: {
-            bind: '{inProgressTasks}',
+            bind: {
+                bindTo: '{inProgressTasks}',
+                deep: true
+            },
             get: function(store) {
                 return store ? store.getCount() : 0;
             }
         },
         closedTasksCount: {
-            bind: '{closedTasks}',
+            bind: {
+                bindTo: '{closedTasks}',
+                deep: true
+            },
             get: function(store) {
                 return store ? store.getCount() : 0;
             }

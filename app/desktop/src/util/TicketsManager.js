@@ -1,7 +1,6 @@
 Ext.define('TaskManager.util.TicketsManager', {
     alternateClassName: ['TicketsManager'],
     singleton: true,
-
     insertTicket(ticketData, store) {
         //<debug>
         debugger;
@@ -42,5 +41,22 @@ Ext.define('TaskManager.util.TicketsManager', {
             store.sync();
             resolve(true);
         });
+    },
+    createNewTicket(viewModel, options = {}) {
+        if (Ext.isDefined(viewModel)) {
+            const defaultConfig = {
+                xtype: 'ticket-dialog',
+                viewModel: {
+                    parent: viewModel
+                }
+            };
+
+            // Merge default config with provided options
+            const config = Ext.platformTags.desktop ? 
+                defaultConfig : 
+                Ext.merge({}, defaultConfig, options);
+
+            return Ext.create(config).show();
+        }
     }
 });

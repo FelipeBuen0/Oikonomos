@@ -56,15 +56,5 @@ Ext.define('TaskManager.controller.MainController', {
             });
             container.setActiveItem(newView);
         }
-    },
-    onAddNewTask () {
-        const me = this;
-        const viewModel = me.getViewModel();
-        Ext.create({
-            xtype: 'ticket-dialog',
-            viewModel: {
-                parent : viewModel
-            }
-        }).show();
     }
 });

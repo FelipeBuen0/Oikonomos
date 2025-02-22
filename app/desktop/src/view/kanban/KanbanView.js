@@ -1,6 +1,7 @@
 Ext.define('TaskManager.view.kanban.KanbanView', {
     extend: 'Ext.Container',
-    xtype: 'kanban-view',    
+    xtype: 'kanban-view',
+    controller: 'kanban-view',
     viewModel: 'kanban-view',
     cls: 'kanban-view',
     layout: {

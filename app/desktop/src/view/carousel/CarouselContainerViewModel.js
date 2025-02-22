@@ -3,6 +3,9 @@ Ext.define('TaskManager.view.carousel.CarouselContainerViewModel', {
     alias: 'viewmodel.carousel-container',
 
     stores: {
+        tasks: {
+            type: 'taskstore'
+        },
         openTasks: {
             source: '{tasks}',
             filters: [{
