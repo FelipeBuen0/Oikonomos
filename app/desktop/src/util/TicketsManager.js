@@ -3,6 +3,9 @@ Ext.define('TaskManager.util.TicketsManager', {
     singleton: true,
 
     insertTicket(ticketData, store) {
+        //<debug>
+        debugger;
+        //</debug>
         return new Promise((resolve) => {
             ticketData.id = parseInt(Ext.id(null, ' ')) + 100;
             store.add(ticketData);
