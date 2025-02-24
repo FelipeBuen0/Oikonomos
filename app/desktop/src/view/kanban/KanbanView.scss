@@ -34,17 +34,17 @@
     }
     
     &.status-ongoing {
-        background-color: rgba(0, 204, 101, 0.1);
-        color: #00CC65;
+        background-color: rgba(235, 149, 21, 0.1);
+        color: #fac123;
     }
     
     &.status-closed {
-        background-color: rgba(8, 11, 13, 0.1);
-        color: #080B0D;
+        background-color: rgba(0, 204, 101, 0.1);
+        color: #00CC65;
     }
     &.status-overdue {
         background-color: rgba(255, 200, 36, 0.1);
-        color: rgb(255, 200, 36);
+        color: #ff9924;
     }
 
     .counter {
@@ -83,8 +83,8 @@
     }
 
     &.status-open .status-bar { background-color: #FF4D4D; }
-    &.status-ongoing .status-bar { background-color: #00CC65; }
-    &.status-closed .status-bar { background-color: #080B0D; }
+    &.status-ongoing .status-bar { background-color: #fac123; }
+    &.status-closed .status-bar { background-color: #00CC65; }
 
     .content {
         padding: 12px 12px 12px 16px;
@@ -96,7 +96,7 @@
         margin-bottom: 16px;
         padding: 8px;
         &.status-open .status-bar { background-color: #FF4D4D; }
-        &.status-ongoing .status-bar { background-color: #00CC65; }
+        &.status-ongoing .status-bar { background-color: #fac123; }
         &.status-closed .status-bar { background-color: #080B0D; }
     }
 

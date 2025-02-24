@@ -1,18 +1,14 @@
 Ext.define('TaskManager.view.ticket.TicketDialog', {
     extend: 'Ext.Dialog',
     xtype: 'ticket-dialog',
-    
     controller: 'ticket-dialog',
     viewModel: 'ticket-dialog',
-    
     title: 'Create New Ticket',
     closable: true,
     maximizable: true,
-    width: 400,
-    height: 500,
-    
+    width: '40%',
+    height: '60%',
     layout: 'fit',
-    
     items: [{
         xtype: 'formpanel',
         reference: 'ticketForm',
@@ -58,6 +54,12 @@ Ext.define('TaskManager.view.ticket.TicketDialog', {
                 text: 'Ongoing',
                 value: 'ongoing'
             }]
+        }, {
+            xtype: 'datefield',
+            label: 'Schedule To',
+            name: 'scheduleTo',
+            minDate: new Date(),
+            required: true
         }]
     }],
 

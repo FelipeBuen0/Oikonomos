@@ -15,16 +15,7 @@ Ext.define('TaskManager.view.dashboards.grid.OverdueTaskGrid', {
     columns: [{
         text: 'Title',
         dataIndex: 'title',
-        flex: 1,
-        cell: {
-            encodeHtml: false   
-        },
-        renderer(value, record) {
-            return `<div>
-                        <span class="priority priority-${record.get('priority')}" style="display: inline-block"></span>
-                        <span style="display: inline-block">&nbsp;${value}</span>
-                    </div>`;
-        }
+        flex: 1
     }, {
         text: 'Schedule To',
         dataIndex: 'scheduleTo',

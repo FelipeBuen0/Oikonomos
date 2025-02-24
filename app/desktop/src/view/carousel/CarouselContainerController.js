@@ -6,6 +6,7 @@ Ext.define('TaskManager.view.carousel.CarouselContainerController', {
         const viewModel = me.getViewModel();
         TicketsManager.createNewTicket(viewModel, {
             height: '100%',
+            width: '100%',
             maximizable: false,
             fullscreen: true,
             modal: true
