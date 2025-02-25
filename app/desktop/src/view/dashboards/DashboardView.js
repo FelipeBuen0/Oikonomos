@@ -9,65 +9,28 @@ Ext.define('TaskManager.view.dashboards.DashboardView', {
         align: 'stretch'
     },
     responsiveConfig: {
+        'small || medium': {
+            defaults: {
+                xtype: 'component',
+                cls: 'dashboard-column',
+                margin: 16
+            },
+            items: [{
+                cls: 'status-overdue',
+                bind: {
+                    html: `
+                        <div class="dashboard-title status-overdue">
+                            <div class="dashboard-text">Overdue Tasks</div>
+                            <div class="dashboard-counter">{overdueTasks.count}</div>
+                        </div>
+                    `
+                }
+            }, {
+                xtype: 'user-task-view'
+            }]
+        },
         large: {
             items: [{
-                xtype: 'container',
-                layout: {
-                    type: 'hbox',
-                    align: 'stretch'
-                },
-                defaults: {
-                    xtype: 'component',
-                    cls: 'dashboard-column',
-                    flex: 1,
-                    margin: 8
-                },
-                items: [{
-                    xtype: 'component',
-                    cls: 'status-open',
-                    bind: {
-                        html: `
-                            <div class="column-title status-open">
-                                <div class="dashboard-text">Open Tasks</div>
-                                <div class="dashboard-counter">{openTasks.count}</div>
-                            </div>
-                        `
-                    }
-                }, {
-                    xtype: 'component',
-                    cls: 'status-ongoing',
-                    bind: {
-                        html: `
-                            <div class="column-title status-ongoing">
-                                <div class="dashboard-text">Ongoing Tasks</div>
-                                <div class="dashboard-counter">{ongoingTasks.count}</div>
-                            </div>
-                        `
-                    }
-                }, {
-                    xtype: 'component',
-                    cls: 'status-closed',
-                    bind: {
-                        html: `
-                            <div class="column-title status-closed">
-                                <div class="dashboard-text">Closed Tasks</div>
-                                <div class="dashboard-counter">{closedTasks.count}</div>
-                            </div>
-                        `
-                    }
-                }, {
-                    xtype: 'component',
-                    cls: 'status-overdued',
-                    bind: {
-                        html: `
-                            <div class="column-title status-overdue">
-                                <div class="dashboard-text">Overdue Tasks</div>
-                                <div class="dashboard-counter">{overdueTasks.count}</div>
-                            </div>
-                        `
-                    }
-                }]
-            }, {
                 xtype: 'container',
                 layout: {
                     type: 'hbox',

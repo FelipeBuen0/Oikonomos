@@ -1,25 +1,11 @@
 .dashboard-view {
-    .priority {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 0px !important;
-        &.priority-1 { background-color: orange; }
-        &.priority-2 { background-color: yellow; }
-        &.priority-3 { background-color: red; }
-    }
 
     .overdue-task {
         background-color: tomato !important;
     }
     .status-open {
         color: #FF4D4D;
-    }
-    .column-title {
-        display: flex;
-        flex-direction: column;
-    }
-    
+    }    
     .status-ongoing {
         color: #fac123;
     }
@@ -29,6 +15,30 @@
     .status-closed {
         color: #00CC65;
     }
+    .dashboard-title {
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: 600;
+        text-align: center;
+        &.status-open {
+            background-color: rgba(255, 77, 77, 0.1);
+            color: #FF4D4D;
+        }
+        
+        &.status-ongoing {
+            background-color: rgba(235, 149, 21, 0.1);
+            color: #fac123;
+        }
+        
+        &.status-closed {
+            background-color: rgba(0, 204, 101, 0.1);
+            color: #00CC65;
+        }
+        &.status-overdue {
+            background-color: rgba(255, 200, 36, 0.1);
+            color: #ff9924;
+        }
+    }
     .dashboard-text {
         font-size: 16px;
         text-align: center;
@@ -37,12 +47,12 @@
         font-size: 32px;
         text-align: center;
     }
-    .dashboard-column {
-        display: flex;
-        flex-direction: row;
-        width: 128px;
+    .dashboard-column{
+        width: 100%;
+        height: 10% !important;
         border-radius: 8px;
-        margin: 8px;
-        overflow: hidden;
+        margin: 16px;
     }
 }
+
+

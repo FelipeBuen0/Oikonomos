@@ -28,31 +28,39 @@ Ext.define('TaskManager.util.TicketsManager', {
     deleteTicket(ticketId, store) {
         return new Promise((resolve, reject) => {
             const record = store.getById(ticketId);
-
             if (!record) {
                 reject('Record not found');
                 return;
             }
-
             store.remove(record);
             store.sync();
             resolve(true);
         });
     },
-    createNewTicket(viewModel, options = {}) {
+    createNewTicket(viewModel) {
+        //ExtJS will merge the configs with the ones already defined.
+        const mobileConfig = {
+            height: '100%',
+            width: '100%',
+            maximizable: false,
+            fullscreen: true,
+            modal: true
+        };
+        const desktopConfig = {
+            closable: true,
+            maximizable: true,
+            width: '40%',
+            height: '60%',
+            layout: 'fit'
+        }
         if (Ext.isDefined(viewModel)) {
-            const defaultConfig = {
+            return Ext.create({
                 xtype: 'ticket-dialog',
                 viewModel: {
                     parent: viewModel
-                }
-            };
-
-            const config = Ext.platformTags.desktop ? 
-                defaultConfig : 
-                Ext.merge({}, defaultConfig, options);
-
-            return Ext.create(config).show();
+                },
+                responsiveConfig: ViewportUtil.applyResponsive(mobileConfig, null, desktopConfig)
+            }).show()
         }
     }
 });
