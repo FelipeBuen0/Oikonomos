@@ -58,6 +58,12 @@ Ext.define('TaskManager.view.ticket.TicketDialog', {
                 text: 'Ongoing',
                 value: 'ongoing'
             }]
+        }, {
+            xtype: 'datefield',
+            label: 'Schedule To',
+            name: 'scheduleTo',
+            required: true,
+            minDate: new Date() + 1
         }]
     }],
 
