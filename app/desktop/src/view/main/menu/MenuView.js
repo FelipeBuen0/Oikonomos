@@ -1,7 +1,7 @@
 Ext.define('TaskManager.view.main.menu.MenuView', {
     extend: 'Ext.Toolbar',
     xtype: 'menu-view',
-    cls: 'menu-view',
+    cls: 'toolbar-menu',
     responsiveConfig: {
         'small || medium': {
             padding: 0,

@@ -44,7 +44,7 @@ Ext.define('TaskManager.controller.MainController', {
         this.switchView('kanban-view');
     },
     onShowEmployees() {
-        this.switchView('employees-view');
+        this.switchView('employee-view');
     },
     switchView(viewXtype) {
         const container = this.lookup('cardContainer');

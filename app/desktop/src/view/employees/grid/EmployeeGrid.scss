@@ -1,0 +1,44 @@
+.employee-card {
+    padding: 10px;
+    
+    .employee-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        
+        .employee-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+        }
+        
+        .employee-role {
+            color: #666;
+            font-style: italic;
+        }
+    }
+    
+    .employee-details {
+        .detail-row {
+            display: flex;
+            align-items: center;
+            margin: 4px 0;
+            color: #555;
+            
+            i {
+                width: 20px;
+                margin-right: 8px;
+                color: #666;
+            }
+        }
+    }
+}
+
+.employee-condensed-cell {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    
+    &:active {
+        background-color: #f5f5f5;
+    }
+}

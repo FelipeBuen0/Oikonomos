@@ -2,7 +2,7 @@ Ext.define('TaskManager.view.dashboards.grid.UserTaskGrid', {
     extend: 'Ext.grid.Grid',
     xtype: 'user-task-grid',
     height: '100%',
-    cls: 'modern-grid',
+    cls: 'alter-grid',
     striped: true,
     columnMenu: null,
     rowLines: false,

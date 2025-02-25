@@ -23,8 +23,23 @@ $primary-color-light: dynamic(lighten($primary-color, 5%));
 $base-gray-color: dynamic(#A6A6A6);
 $base-color: $primary-color;
 
-.modern-grid {
+
+.toolbar-menu {
+    box-shadow: none;
+    border-bottom: 1px solid #e0e0e0;
+    // background-color: $base-white-color !important;
+    div .icon-color{
+        color: $primary-color;
+    }
+    .title {
+        color: $primary-color;
+        margin: 8px 8px 0px 0px;
+    }
+}
+
+.alter-grid {
     // background-color: #A6A6A6;
+    width: 99% !important;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
     .x-gridheader {
