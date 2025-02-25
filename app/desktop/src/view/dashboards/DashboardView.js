@@ -10,13 +10,9 @@ Ext.define('TaskManager.view.dashboards.DashboardView', {
     },
     responsiveConfig: {
         'small || medium': {
-            defaults: {
-                xtype: 'component',
-                cls: 'dashboard-column',
-                margin: 16
-            },
             items: [{
-                cls: 'status-overdue',
+                xtype: 'component',
+                cls: 'status-overdue dashboard-column',
                 bind: {
                     html: `
                         <div class="dashboard-title status-overdue">
@@ -26,7 +22,28 @@ Ext.define('TaskManager.view.dashboards.DashboardView', {
                     `
                 }
             }, {
-                xtype: 'user-task-view'
+                xtype: 'user-task-view',
+                bind: {
+                    store: '{overdueTasks}'
+                },
+                margin: 16
+            }, {
+                xtype: 'component',
+                cls: 'status-open dashboard-column',
+                bind: {
+                    html: `
+                        <div class="dashboard-title status-open">
+                            <div class="dashboard-text">Open Tasks</div>
+                            <div class="dashboard-counter">{openTasks.count}</div>
+                        </div>
+                    `
+                }
+            }, {
+                xtype: 'user-task-view',
+                bind: {
+                    store: '{openTasks}'
+                },
+                margin: 16
             }]
         },
         large: {

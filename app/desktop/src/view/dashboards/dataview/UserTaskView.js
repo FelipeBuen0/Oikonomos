@@ -2,16 +2,13 @@ Ext.define('TaskManager.view.dashboards.dataview.UserTaskView', {
     extend: 'Ext.dataview.DataView',
     xtype: 'user-task-view',
     cls: 'user-task-view',
+    itemCls: 'task-dataview-item',
+    height: '100%',
     layout: {
         type: 'vbox',
         align: 'stretch'
     },
-    height: '100%',
     flex: 1,
-    scrollable: true,
-    bind: {
-        store: '{overdueTasks}'
-    },
     itemTpl: new Ext.XTemplate(`
         <div class="task-item">
             <div class="task-header">
@@ -23,13 +20,13 @@ Ext.define('TaskManager.view.dashboards.dataview.UserTaskView', {
             <div class="task-title">{title}</div>
         </div>
     `, {
-        getStatus: function(values) {
+        getStatus (values) {
             if (values.scheduleTo < Ext.Date.format(new Date(), 'Y-m-d')) {
                 return 'overdue';
             }
             return values.status;
         },
-        getIcon: function(values) {
+        getIcon (values) {
             const iconMap = {
                 'open': 'fa-folder-open',
                 'ongoing': 'fa-spinner fa-spin',
@@ -41,7 +38,5 @@ Ext.define('TaskManager.view.dashboards.dataview.UserTaskView', {
             }
             return iconMap[values.status] || 'fa-question-circle';
         }
-    }),
-
-    itemCls: 'task-dataview-item'
+    })
 });

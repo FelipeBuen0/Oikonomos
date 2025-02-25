@@ -4,7 +4,6 @@ Ext.define('TaskManager.util.ViewportUtil', {
 
     // Use this method for quick responsive configurations
     applyResponsive(small, medium, large) {
-        debugger
         return {
             'width < 641': small,
             'width >= 641 && width < 1007': medium ? medium : small,
@@ -16,7 +15,7 @@ Ext.define('TaskManager.util.ViewportUtil', {
     getResponsiveFormulas() {
         return {
             small(context) {
-                return context.width < 641;
+                return context.width < 641; 
             },
             medium(context) {
                 return context.width >= 641 && context.width < 1007;
