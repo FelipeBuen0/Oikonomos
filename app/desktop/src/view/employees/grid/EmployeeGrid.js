@@ -7,7 +7,9 @@ Ext.define('TaskManager.view.employees.grid.EmployeeGrid', {
     requires: [
         'Ext.grid.column.Template'
     ],
-
+    listeners: {
+        childtap: 'onEmployeeChildTap'
+    },
     responsiveConfig: ViewportUtil.applyResponsive({
         // Phone configuration
         listeners: {
@@ -47,9 +49,6 @@ Ext.define('TaskManager.view.employees.grid.EmployeeGrid', {
         }]
     }, null, {
         // Desktop/Tablet configuration
-        listeners: {
-            select: 'onEmployeeSelect'
-        },
         columns: [{ 
             text: 'Name', 
             dataIndex: 'name', 

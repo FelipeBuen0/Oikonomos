@@ -1,16 +1,16 @@
 Ext.define('TaskManager.view.employees.EmployeeViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.employee-view',
-    onEmployeeSelect (grid, records) {
+    onEmployeeChildTap (grid, selected) {
         const me = this;
         debugger
         const form = me.lookup('employeeForm');
-        form.setRecord(records[0]);
-        me.onEditEmployee();
+        form.setRecord(selected.get('record'));
     },
     onAddEmployee () {
         const me = this;
         const form = me.lookup('employeeForm');
+        debugger
         form.setRecord(null);
         me.goToForm();
     },
