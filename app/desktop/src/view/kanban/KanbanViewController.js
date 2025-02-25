@@ -6,8 +6,10 @@ Ext.define('TaskManager.view.kanban.KanbanViewController', {
         const viewModel = me.getViewModel();
         TicketsManager.createNewTicket(viewModel);
     },
-    onItemTap() {
-        const me = this;
-        const viewModel = me.getViewModel();
+    onItemTap: function(view, index, target, record) {
+        this.showTicketDialog(record);
+    },
+    showTicketDialog: function(record) {
+        Ext.create('Ext.window.Window').show();
     }
 });

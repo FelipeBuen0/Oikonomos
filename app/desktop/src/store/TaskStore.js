@@ -27,7 +27,7 @@ Ext.define('TaskManager.store.TaskStore', {
         assignedTo: 'Mike Johnson',
         priority: '1',
         status: 'ongoing',
-        scheduleTo: '2025-03-20'
+        scheduleTo: '2025-01-20'
     }, {
         id: 4,
         title: 'Fix performance issues',
@@ -35,14 +35,14 @@ Ext.define('TaskManager.store.TaskStore', {
         assignedTo: 'Sarah Wilson',
         priority: '3',
         status: 'open',
-        scheduleTo: '2025-02-28'
+        scheduleTo: '2025-01-28'
     }, {
         id: 5,
         title: 'Add export functionality',
         description: 'Implement data export to PDF and Excel',
         assignedTo: 'John Smith',
         priority: '2',
-        status: 'open',
+        status: 'ongoing',
         scheduleTo: '2025-04-10'
     }, {
         id: 6,
@@ -50,7 +50,7 @@ Ext.define('TaskManager.store.TaskStore', {
         description: 'Add role-based access control system',
         assignedTo: 'Mike Johnson',
         priority: '1',
-        status: 'open',
+        status: 'ongoing',
         scheduleTo: '2025-05-15'
     }, {
         id: 7,

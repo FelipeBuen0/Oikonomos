@@ -31,23 +31,14 @@ Ext.define('TaskManager.view.dashboards.grid.UserTaskGrid', {
                 status = 'overdue';
                 iconClass = iconMap['overdue'];
             }
-            return `<div class="status-${status}">
-                        <i class="fas ${iconClass}"></i>
+            return `<div>
+                        <i class="status-${status} fas ${iconClass}"></i>
                         <span style="margin-left: 8px">${value}</span>
                     </div>`;
         }
     }, {
         text: 'Title',
         dataIndex: 'title',
-        flex: 1,
-        cell: {
-            encodeHtml: false   
-        },
-        renderer(value, record) {
-            return `<div>
-                        <span class="priority priority-${record.get('priority')}" style="display: inline-block"></span>
-                        <span style="display: inline-block">&nbsp;${value}</span>
-                    </div>`;
-        }
+        flex: 1
     }]
 });

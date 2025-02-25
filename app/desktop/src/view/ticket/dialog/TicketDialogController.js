@@ -1,4 +1,4 @@
-Ext.define('TaskManager.view.ticket.TicketDialogController', {
+Ext.define('TaskManager.view.ticket.dialog.TicketDialogController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.ticket-dialog',
 
