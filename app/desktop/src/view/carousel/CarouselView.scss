@@ -16,9 +16,22 @@
         }
     }
 
-    .kanban-items {
+    .carousel-items {
         height: calc(100vh - 110px);
         overflow-y: auto;
+        .description {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+    
+        .footer {
+            display: flex;
+            justify-content: flex-end;
+            font-size: 0.8em;
+            color: #999;
+        }
     }
 }
 .carousel-container {

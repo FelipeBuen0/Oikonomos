@@ -18,17 +18,14 @@ Ext.define('TaskManager.view.main.menu.MenuView', {
             },
             items: [{
                 iconCls: 'x-fa fa-home icon-color',
-                text: 'Dashboard',
                 margin: 0,
                 handler: 'onShowDashboard'
             }, {
                 xtype: 'button',
                 iconCls: 'x-fa fa-tasks icon-color',
-                text: 'Kanban',
-                handler: 'onShowKanban'
+                handler: 'onShowTicketView'
             }, {
                 xtype: 'button',
-                text: 'Employees',
                 iconCls: 'x-fa fa-users icon-color',
                 handler: 'onShowEmployees'
             }]
@@ -51,7 +48,7 @@ Ext.define('TaskManager.view.main.menu.MenuView', {
             }, {
                 text: 'Kanban',
                 iconCls: 'x-fa fa-tasks icon-color',
-                handler: 'onShowKanban',
+                handler: 'onShowTicketView',
                 margin: '8 0 8 0'
             }, {
                 text: 'Employees',

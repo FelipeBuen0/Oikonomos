@@ -16,8 +16,5 @@ Ext.define('TaskManager.view.main.MainView', {
         items: [{
            xtype: 'dashboard-view' 
         }]
-    }],
-    listeners: {
-        resize: 'onResize'
-    }
+    }]
 });

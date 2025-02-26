@@ -401,28 +401,7 @@ input[inputmode="numeric"] {
     $ui: "tchip",
     $background-color: $base-white-color,
     $text-margin: 4px
-);    
-// $base-color, $base-gray-color, $primary-color) {
-//     .x-chip {
-//         color: $base-color;
-//         background-color: $base-gray-color;
-//         border: 1px solid $primary-color;
-//         border-radius: 4px;
-//         padding: 4px 8px;
-//         display: inline-flex;
-//         align-items: center;
-//         .x-chip-text {
-//             margin-right: 8px;
-//             font-weight: 500;
-//         }
-//         .x-chip-close {
-//             cursor: pointer;
-//             &:hover {
-//                 color: darken($chip-color, 10%);
-//             }
-//         }
-//     }
-// }
+);
 
 
 .circle-status {

@@ -7,7 +7,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
         xtype: 'container',
         items: [{
             xtype: 'component',
-            cls: 'kanban-column-header',
+            cls: 'carousel-column-header',
             bind: {
                 html: `
                     <div class="column-title status-open">
@@ -16,7 +16,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
                     </div>`
             }
         }, {
-            xtype: 'kanban-item-view',
+            xtype: 'carousel-item-view',
             bind: {
                 store: '{openTasks}'
             }
@@ -25,7 +25,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
         xtype: 'container',
         items: [{
             xtype: 'component',
-            cls: 'kanban-column-header',
+            cls: 'carousel-column-header',
             bind: {
                 html: `
                     <div class="column-title status-ongoing">
@@ -34,7 +34,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
                     </div>`
             }
         }, {
-            xtype: 'kanban-item-view',
+            xtype: 'carousel-item-view',
             bind: {
                 store: '{ongoingTasks}'
             }
@@ -43,7 +43,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
         xtype: 'container',
         items: [{
             xtype: 'component',
-            cls: 'kanban-column-header',
+            cls: 'carousel-column-header',
             bind: {
                 html: `
                     <div class="column-title status-closed">
@@ -52,7 +52,7 @@ Ext.define('TaskManager.view.carousel.CarouselView', {
                     </div>`
             }
         }, {
-            xtype: 'kanban-item-view',
+            xtype: 'carousel-item-view',
             bind: {
                 store: '{closedTasks}'
             }

@@ -28,7 +28,7 @@ Ext.define('TaskManager.view.ticket.dialog.TicketDialog', {
                     label: 'Description',
                     name: 'description',
                     required: true,
-                    height: 100
+                    height: 256
                 }, {
                     xtype: 'selectfield',
                     label: 'Priority',
@@ -71,7 +71,7 @@ Ext.define('TaskManager.view.ticket.dialog.TicketDialog', {
                 reference: 'ticketForm',
                 layout: 'vbox',
                 defaults: {
-                    margin: '10 10 5 10'
+                    margin: 16
                 },
                 items: [{
                     xtype: 'container',
@@ -79,10 +79,14 @@ Ext.define('TaskManager.view.ticket.dialog.TicketDialog', {
                         type: 'hbox',
                         align: 'stretch'
                     },
+                    defaults: {
+                        margin : 8
+                    },
                     items: [{
                         xtype: 'textfield',
                         label: 'Title',
                         name: 'title',
+                        flex: 1,
                         required: true
                     }, {
                         xtype: 'selectfield',
@@ -104,24 +108,30 @@ Ext.define('TaskManager.view.ticket.dialog.TicketDialog', {
                     xtype: 'textareafield',
                     label: 'Description',
                     name: 'description',
-                    required: true,
-                    height: 100
+                    height: 100,
+                    margin: 24,
+                    required: true
                 }, {
                     xtype: 'container',
                     layout: {
                         type: 'hbox',
                         align: 'stretch'
                     },
+                    defaults: {
+                        margin : 8
+                    },
                     items: [{
                         xtype: 'datefield',
                         label: 'Schedule To',
                         name: 'scheduleTo',
                         minDate: new Date(),
-                        required: true
+                        required: true,
+                        flex: 1
                     }, {
                         xtype: 'selectfield',
                         label: 'Status',
                         name: 'status',
+                        flex: 1,
                         required: true,
                         options: [{
                             text: 'Open',
