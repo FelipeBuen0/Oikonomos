@@ -9,7 +9,7 @@ Ext.define('TaskManager.view.dashboards.grid.UserTaskGrid', {
     headerBorder: false,
     title: 'User Tasks',
     bind: {
-        store: '{tasks}'
+        store: '{openTasks}'
     },
     columns: [{
         text: 'Assigned To',
@@ -18,21 +18,9 @@ Ext.define('TaskManager.view.dashboards.grid.UserTaskGrid', {
         cell: {
             encodeHtml: false
         },
-        renderer(value, record) {
-            const iconMap = {
-                'open': 'fa-folder-open',
-                'ongoing': 'fa-spinner fa-spin',
-                'overdue': 'fa-clock',
-                'closed': 'fa-check-circle'
-            };
-            let status = record.get('status');
-            let iconClass = iconMap[record.get('status')] || 'fa-question-circle';
-            if (record.get('scheduleTo') < Ext.Date.format(new Date(), 'Y-m-d')) {
-                status = 'overdue';
-                iconClass = iconMap['overdue'];
-            }
+        renderer (value) {
             return `<div>
-                        <i class="status-${status} fas ${iconClass}"></i>
+                        <i class="status-open fas fa-folder-open"></i>
                         <span style="margin-left: 8px">${value}</span>
                     </div>`;
         }

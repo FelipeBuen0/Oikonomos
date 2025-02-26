@@ -17,6 +17,10 @@ Ext.define('TaskManager.view.dashboards.grid.OverdueTaskGrid', {
         dataIndex: 'title',
         flex: 1
     }, {
+        text: 'Assigned To',
+        dataIndex: 'assignedTo',
+        flex: 1, 
+    }, {
         text: 'Schedule To',
         dataIndex: 'scheduleTo',
         flex: 1,
