@@ -2,12 +2,12 @@ Ext.define('TaskManager.view.dashboards.DashboardViewController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.dashboard-view',
 
-    init: function() {
+    init() {
         // Initial setup when the view is created
         this.loadTasks();
     },
 
-    loadTasks: function() {
+    loadTasks() {
         // Get the ViewModel
         var viewModel = this.getViewModel();
         
@@ -15,7 +15,7 @@ Ext.define('TaskManager.view.dashboards.DashboardViewController', {
         var store = viewModel.getStore('tasks');
         if (store) {
             store.load({
-                callback: function(records, operation, success) {
+                callback(records, operation, success) {
                     if (success) {
                         this.updateTaskCounts();
                     }
@@ -25,7 +25,7 @@ Ext.define('TaskManager.view.dashboards.DashboardViewController', {
         }
     },
 
-    updateTaskCounts: function() {
+    updateTaskCounts() {
         var store = this.getViewModel().getStore('tasks');
         var viewModel = this.getViewModel();
 
@@ -52,7 +52,7 @@ Ext.define('TaskManager.view.dashboards.DashboardViewController', {
         }
     },
 
-    onStoreDataChanged: function() {
+    onStoreDataChanged() {
         // Update counts when store data changes
         this.updateTaskCounts();
     }

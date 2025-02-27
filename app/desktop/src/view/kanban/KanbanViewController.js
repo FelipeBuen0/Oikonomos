@@ -6,10 +6,13 @@ Ext.define('TaskManager.view.kanban.KanbanViewController', {
         const viewModel = me.getViewModel();
         TicketsManager.createNewTicket(viewModel);
     },
-    onItemTap: function(view, index, target, record) {
+    /* Section 4.2: Touch-friendly interactions
+     * Handles both tap and click events for cross-device compatibility
+     */
+    onItemTap(view, index, target, record) {
         this.showTicketDialog(record);
     },
-    showTicketDialog: function(record) {
+    showTicketDialog(record) {
         Ext.create('Ext.window.Window').show();
     }
 });

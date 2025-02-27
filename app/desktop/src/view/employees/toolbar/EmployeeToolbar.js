@@ -18,7 +18,7 @@ Ext.define('TaskManager.view.employees.toolbar.EmployeeToolbar', {
             iconCls: 'x-fas fa-pen-square',
             width: 64,
             bind: {
-                disabled: '{!employeeGrid.selection}'
+                disabled: '{!record}'
             }
         }]
     }, null, {
@@ -37,7 +37,7 @@ Ext.define('TaskManager.view.employees.toolbar.EmployeeToolbar', {
             handler: 'onEditEmployee',
             iconCls: 'x-fas fa-pen-square',
             bind: {
-                disabled: '{!employeeGrid.selection}'
+                disabled: '{!record}'
             }
         }]
     })

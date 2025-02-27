@@ -2,7 +2,28 @@ Ext.define('TaskManager.store.TaskStore', {
     extend: 'Ext.data.Store',
     alias: 'store.taskstore',
     
-    fields: ['id', 'title', 'description', 'assignedTo', 'scheduleTo', 'status', 'priority'],
+    fields: [{
+        name: 'id',
+        type: 'int'
+    }, {
+        name: 'title',
+        type: 'string'
+    }, {
+        name: 'description',
+        type: 'string'
+    }, {
+        name: 'assignedTo',
+        type: 'string'
+    }, {
+        name: 'scheduleTo',
+        type: 'string'
+    }, {
+        name: 'status',
+        type: 'string'
+    }, {
+        name: 'priority',
+        type: 'string'
+    }],
     
     data: [{
         id: 1,

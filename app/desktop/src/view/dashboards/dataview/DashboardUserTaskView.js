@@ -1,4 +1,4 @@
-Ext.define('TaskManager.view.dashboards.dataview.UserTaskView', {
+Ext.define('TaskManager.view.dashboards.dataview.DashboardUserTaskView', {
     extend: 'Ext.dataview.DataView',
     xtype: 'user-task-view',
     cls: 'user-task-view',

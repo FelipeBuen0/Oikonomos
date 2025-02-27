@@ -1,4 +1,4 @@
-Ext.define('TaskManager.view.dashboards.grid.UserTaskGrid', {
+Ext.define('TaskManager.view.dashboards.grid.DashboardUserTaskGrid', {
     extend: 'Ext.grid.Grid',
     xtype: 'user-task-grid',
     height: '100%',

@@ -2,29 +2,67 @@ Ext.define('TaskManager.store.EmployeeStore', {
     extend: 'Ext.data.Store',
     alias: 'store.employeestore',
     
-    fields: [
-        'id',
-        'name',
-        'email',
-        'phoneNumber',
-        'street',
-        'district',
-        'country',
-        'houseNumber',
-        'documentType', // CPF or CNPJ
-        'documentNumber',
-        'zipCode',
-        'company',
-        'role',
-        'active',
-        'createdAt',
-        'updatedAt',
-        {name: 'ssn', type: 'string'},
-        {name: 'emergencyContact', type: 'string'},
-        {name: 'emergencyPhone', type: 'string'},
-        {name: 'auditLog', type: 'auto'}
-    ],
-    
+    fields: [{
+        name: 'id',
+        type: 'int'
+    }, {
+        name: 'name',
+        type: 'string'
+    }, {
+        name: 'email',
+        type: 'string'
+    }, {
+        name: 'street',
+        type: 'string'
+    }, {
+        name: 'district',
+        type: 'string'
+    }, {
+        name: 'country',
+        type: 'string'
+    }, {
+        name: 'houseNumber',
+        type: 'string'
+    }, {
+        name: 'documentType',
+        type: 'string'
+    }, {
+        name: 'documentNumber',
+        type: 'string'
+    }, {
+        name: 'documentNumber',
+        type: 'string'
+    }, {
+        name: 'zipCode',
+        type: 'string'
+    }, {
+        name: 'company',
+        type: 'string'
+    }, {
+        name: 'role',
+        type: 'string'
+    }, {
+        name: 'active',
+        type: 'string'
+    }, {
+        name: 'createdAt',
+        type: 'date'
+    }, {
+        name: 'updatedAt',
+        type: 'date'
+    }, {
+        name: 'ssn', 
+        type: 'string'
+    }, {
+        name: 'emergencyContact', 
+        type: 'string'
+    }, {
+        name: 'emergencyPhone', 
+        type: 'string'
+    }, {
+        name: 'auditLog', 
+        type: 'auto'
+    }],
     data: [{
         id: 1,
         name: 'Michael Scott',

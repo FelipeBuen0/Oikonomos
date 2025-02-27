@@ -1,4 +1,4 @@
-Ext.define('TaskManager.view.main.menu.MenuView', {
+Ext.define('TaskManager.view.main.menu.MainMenuView', {
     extend: 'Ext.Toolbar',
     xtype: 'menu-view',
     cls: 'toolbar-menu',

@@ -4,7 +4,9 @@ Ext.define('TaskManager.view.main.MainView', {
     cls: 'main-view',
     controller: 'main-view',
     layout: 'vbox',
-    //Obtain the formulas from ViewportUtil.js
+    /* Section 5.1: Layout Switching
+     * Card layout for main content switching
+     */
     responsiveFormulas: ViewportUtil.getResponsiveFormulas(),
     items: [{
         xtype: 'menu-view'

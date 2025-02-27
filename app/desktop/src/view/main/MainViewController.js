@@ -23,7 +23,6 @@ Ext.define('TaskManager.controller.MainController', {
     switchView(viewXtype) {
         const container = this.lookup('cardContainer');
         const view = container.down(viewXtype);
-        debugger
         if (view) {
             container.setActiveItem(view);
         } else {

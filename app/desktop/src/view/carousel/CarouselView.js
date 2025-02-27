@@ -1,4 +1,8 @@
 Ext.define('TaskManager.view.carousel.CarouselView', {
+    /* Section 4.2: Kanban/Ticket View
+     * Mobile-optimized carousel implementation
+     * Touch-friendly interactions for mobile
+     */
     extend: 'Ext.carousel.Carousel',
     xtype: 'carousel-view',
     cls: 'carousel-view',

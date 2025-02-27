@@ -1,12 +1,12 @@
-Ext.define('TaskManager.view.kanban.items.ItemView', {
+Ext.define('TaskManager.view.carousel.items.CarouselItemView', {
     extend: 'Ext.dataview.DataView',
-    xtype: 'kanban-item-view',
-    itemSelector: '.kanban-item',
-    cls: 'kanban-items',
+    xtype: 'carousel-item-view',
+    itemSelector: '.carousel-item',
+    cls: 'carousel-items',
     scrollable: true,
     selectOnFocus: true,
     itemTpl: `
-        <div class="kanban-item status-{status}">
+        <div class="carousel-item status-{status}">
             <div class="status-bar"></div>
             <div class="content">
                 <div class="header">

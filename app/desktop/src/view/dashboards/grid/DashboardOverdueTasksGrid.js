@@ -1,4 +1,4 @@
-Ext.define('TaskManager.view.dashboards.grid.OverdueTaskGrid', {
+Ext.define('TaskManager.view.dashboards.grid.DashboardOverdueTasksGrid', {
     extend: 'Ext.grid.Grid',
     xtype: 'overdue-task-grid',
     height: '100%',
